@@ -1,0 +1,108 @@
+/* הגדרות בסיסיות למראה מודרני */
+body {
+    font-family: 'Assistant', 'Segoe UI', sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #2d3436;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    color: rgb(255, 255, 255);
+}
+
+/* אזור המילה - הריבועים */
+section {
+    display: flex;
+    gap: 12px;
+    margin: 40px 0;
+    perspective: 1000px;
+}
+
+section div {
+    width: 45px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* כפתור "התחל משחק" */
+button:not(footer button) {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+    transition: all 0.2s;
+    margin-bottom: 20px;
+}
+
+button:not(footer button):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.6);
+}
+
+/* המקלדת */
+footer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 600px;
+}
+
+footer button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button:hover:not(:disabled) {
+    background: #6c5ce7;
+    color: white;
+}
+
+footer button:disabled {
+    opacity: 0.5;
+    background: #dfe6e9;
+    cursor: not-allowed;
+}
+
+/* הודעות תוצאה */
+p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d63031; /* צבע ברירת מחדל להפסד */
+    height: 40px;
+}
